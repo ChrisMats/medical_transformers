@@ -484,6 +484,7 @@ class Trainer(BaseTrainer):
         axs[1].set_xscale('log')
         plt.savefig(os.path.join(res_dir, pref_m + '_grid_search_out.png'))   
         
+    # FROM: https://github.com/leftthomas/SimCLR/blob/cee178b6cab1efab67f8b527a0cff91c9e793f5c/main.py#L48
     def knn_predict(self, feature, feature_bank, feature_labels, 
                     knn_k: int, knn_t: float, classes: int = 10, multi_label = False):
         """Helper method to run kNN predictions on features based on a feature bank
