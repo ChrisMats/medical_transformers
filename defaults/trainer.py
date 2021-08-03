@@ -299,8 +299,8 @@ class Trainer(BaseTrainer):
                     metric.add_preds(outputs, labels)
                 
         if self.log_embeddings:
-            build_umaps(feature_bank, dataloader, labels = metric.truths if self.is_supervised else knn_metric.truths, 
-                        id_bank = id_bank, mode = 'test', wandb_logging=False)                         
+            self.build_umaps(feature_bank, dataloader, labels = metric.truths if self.is_supervised else knn_metric.truths, 
+                        mode = 'test', wandb_logging=False)                         
         
         self.test_loss = np.array(test_loss).mean() if test_loss else None
         test_metrics = {}
