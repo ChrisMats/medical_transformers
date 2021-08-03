@@ -1,0 +1,75 @@
+{
+"general_args":
+            {"overwrite_defaults" : true,
+             "inherit" : ["Resize", "Normalize"]
+            },   
+    
+"repetition_strategy":
+            {"n_augmentations" : [1, 1, 6],
+             "order" : ["global_1", "global_2", "local"]
+            },
+"transforms":{
+    "train_transforms" : 
+                        {"global_1":
+                                    {"RandomResizedCrop" : {"apply" : true,
+                                                            "size" : 224,
+                                                            "scale" : [0.4, 1.0]},
+                                    "HorizontalFlip" : {"apply" : true,
+                                                        "p" : 0.5}, 
+                                    "ColorJitter" : {"apply" : true,
+                                                    "brightness" : 0.4,
+                                                    "contrast" : 0.4,
+                                                    "saturation" : 0.2,
+                                                    "hue" : 0.1,
+                                                    "p" : 0.8},
+                                    "RandomGrayscale" : {"apply" : true,
+                                                            "p" : 0.2},                                  
+                                    "RandomGaussianBlur" : {"apply" : true,
+                                                          "radius_min" : 0.1,
+                                                          "radius_max" : 2.0, 
+                                                          "p" : 1.0}
+                                    },
+                        "global_2":
+                                    {"RandomResizedCrop" : {"apply" : true,
+                                                            "size" : 224,
+                                                            "scale" : [0.4, 1.0]},
+                                    "HorizontalFlip" : {"apply" : true,
+                                                        "p" : 0.5}, 
+                                    "ColorJitter" : {"apply" : true,
+                                                    "brightness" : 0.4,
+                                                    "contrast" : 0.4,
+                                                    "saturation" : 0.2,
+                                                    "hue" : 0.1,
+                                                    "p" : 0.8},
+                                    "RandomGrayscale" : {"apply" : true,
+                                                            "p" : 0.2},
+                                    "RandomGaussianBlur" : {"apply" : true,
+                                                          "radius_min" : 0.1,
+                                                          "radius_max" : 2.0, 
+                                                          "p" : 0.1},
+                                    "RandomSolarize" : {"apply" : true,
+                                                        "threshold" : 128,
+                                                        "p" : 0.2}  
+                                     },
+                        "local":
+                                    {"RandomResizedCrop" : {"apply" : true,
+                                                            "size" : 96,
+                                                            "scale" : [0.05, 0.4]},
+                                    "HorizontalFlip" : {"apply" : true,
+                                                        "p" : 0.5}, 
+                                    "ColorJitter" : {"apply" : true,
+                                                    "brightness" : 0.4,
+                                                    "contrast" : 0.4,
+                                                    "saturation" : 0.2,
+                                                    "hue" : 0.1,
+                                                    "p" : 0.8},
+                                    "RandomGrayscale" : {"apply" : true,
+                                                            "p" : 0.2},
+                                    "RandomGaussianBlur" : {"apply" : true,
+                                                          "radius_min" : 0.1,
+                                                          "radius_max" : 2.0, 
+                                                          "p" : 0.5}
+                                     }                     
+        }
+}
+}
