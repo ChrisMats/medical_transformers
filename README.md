@@ -1,9 +1,9 @@
-# Is it Time to Replace CNNs with Transformers for Medical Images?
+# [Is it Time to Replace CNNs with Transformers for Medical Images?](https://arxiv.org/abs/2108.09038)
 
-***Accepted at ICCV-2021: Workshop on Computer Vision for Automated Medical Diagnosis***
+***Accepted at ICCV-2021: Workshop on Computer Vision for Automated Medical Diagnosis (CVAMD)***
 
 Convolutional Neural Networks (CNNs) have reigned for a decade as the de facto approach to automated medical image diagnosis. 
-Recently Vision Transformers (ViTs) have appeared as a competitive alternative to CNNs, yielding similar levels of performance, while possessing several interesting properties that could prove beneficial for medical imaging tasks.
+Recently, vision transformers (ViTs) have appeared as a competitive alternative to CNNs, yielding similar levels of performance while possessing several interesting properties that could prove beneficial for medical imaging tasks.
 In this work, we explore whether it is time to move to transformer-based models or if we should keep working with CNNs - can we trivially switch to transformers? 
 If so, what are the advantages and drawbacks of switching to ViTs for medical image diagnosis?
 We consider these questions in a series of experiments on three mainstream medical image datasets.
