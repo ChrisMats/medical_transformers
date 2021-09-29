@@ -5,7 +5,7 @@
 Convolutional Neural Networks (CNNs) have reigned for a decade as the de facto approach to automated medical image diagnosis. 
 Recently, vision transformers (ViTs) have appeared as a competitive alternative to CNNs, yielding similar levels of performance while possessing several interesting properties that could prove beneficial for medical imaging tasks.
 In this work, we explore whether it is time to move to transformer-based models or if we should keep working with CNNs - can we trivially switch to transformers? 
-If so, what are the advantages and drawbacks of switching to ViTs for medical image diagnosis?
+If so, what are the advantages and drawbacks of switching to ViTs for medical image diagnosis? 
 We consider these questions in a series of experiments on three mainstream medical image datasets.
 Our findings show that, while CNNs perform better when trained from scratch, off-the-shelf vision transformers using default hyperparameters are on par with CNNs when pretrained on ImageNet, and outperform their CNN counterparts when pretrained using self-supervision.
 
